@@ -28,12 +28,10 @@
             <nav class="navbar" id="navbar">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#home" class="nav-link active">Beranda</a></li>
-                   <li class="nav-item">
-    <a href="#produk" class="nav-link">Produk</a>
-</li>
+                    <li class="nav-item"><a href="produk.html" class="nav-link">Produk</a></li>
 
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portofolio</a></li>
-                    <li class="nav-item"><a href="#articles" class="nav-link">Artikel</a></li>
+                    <li class="nav-item"><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+                    <li class="nav-item"><a href="artikel.html" class="nav-link">Artikel</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
                 </ul>
                 <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
@@ -252,7 +250,10 @@
                             Sistem gerak manual yang sederhana dan andal, cocok untuk
                             ruangan dengan akses rutin dan fleksibilitas tinggi.
                         </p>
-                        <button type="button" class="btn btn-outline btn-sm" data-modal="product-manual">Lihat Detail</button>
+                        <div class="choice-actions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button type="button" class="btn btn-outline btn-sm" data-modal="product-manual">Lihat Detail</button>
+                            <a href="produk.html#manual" class="btn btn-primary btn-sm">Lihat Katalog</a>
+                        </div>
                     </div>
                 </div>
 
@@ -267,7 +268,10 @@
                             satu sentuhan, ideal untuk ruangan dengan volume dokumen
                             tinggi.
                         </p>
-                        <button type="button" class="btn btn-outline btn-sm" data-modal="product-mekanik">Lihat Detail</button>
+                        <div class="choice-actions" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button type="button" class="btn btn-outline btn-sm" data-modal="product-mekanik">Lihat Detail</button>
+                            <a href="produk.html#mekanik" class="btn btn-primary btn-sm">Lihat Katalog</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -559,11 +563,11 @@
             <h3>Informasi Perusahaan</h3>
 
             <ul>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Produk</a></li>
-                <li><a href="#">Portofolio</a></li>
-                <li><a href="#">Artikel</a></li>
-                <li><a href="#">Kontak Kami</a></li>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="portofolio.html">Portofolio</a></li>
+                <a href="artikel.html" class="nav-link">Artikel</a>
+                <li><a href="#contact">Kontak Kami</a></li>
             </ul>
         </div>
 

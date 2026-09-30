@@ -29,11 +29,7 @@ function openMobileNav() {
 
 navToggle?.addEventListener("click", event => {
     event.stopPropagation();
-    if (navbar?.classList.contains("active")) {
-        closeMobileNav();
-    } else {
-        openMobileNav();
-    }
+    openMobileNav();
 });
 
 navClose?.addEventListener("click", closeMobileNav);
@@ -55,10 +51,16 @@ dropdownToggles.forEach(toggle => {
 /* Close the mobile menu only for real navigation links. */
 navLinks.forEach(link => {
     link.addEventListener("click", event => {
-        if (link.classList.contains("drop-toggle")) return;
-
         const href = link.getAttribute("href");
-        if (href && href.startsWith("#") && href !== "#") {
+
+        // Jangan cegah link menuju halaman lain
+        if (href && !href.startsWith("#")) {
+            closeMobileNav();
+            return;
+        }
+
+        // Link dalam halaman yang sama
+        if (!link.classList.contains("drop-toggle")) {
             closeMobileNav();
         }
     });
